@@ -6,10 +6,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 public class MainActivity extends AppCompatActivity {
     ImageView[] imageViews = new ImageView[46];
     int imgIdx = 0;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
         imageViews[43] = findViewById(R.id.imageView44);
         imageViews[44] = findViewById(R.id.imageView45);
         imageViews[45] = findViewById(R.id.imageView46);
+
+        progressBar = findViewById(R.id.progressBar);
     }
 
     public void clickedBefore(View view){ changeImageBefore(); }
@@ -80,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             imgIdx--;
             imageViews[imgIdx].setVisibility(View.VISIBLE);
         }
+        progressBar.setProgress(imgIdx);
     }
 
     private void changeImageNext(){
@@ -92,5 +97,6 @@ public class MainActivity extends AppCompatActivity {
             imgIdx++;
             imageViews[imgIdx].setVisibility(View.VISIBLE);
         }
+        progressBar.setProgress(imgIdx);
     }
 }
