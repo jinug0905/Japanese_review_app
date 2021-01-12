@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Japanese_review">
+
+        <activity android:name=".KatakanaReview"
+            android:label="Katakana Review"
+            android:theme="@style/Theme.MaterialComponents.Light.Dialog"></activity>
+
+        <activity android:name=".HiraganaReview"
+            android:label="Hiragana Review"
+            android:theme="@style/Theme.MaterialComponents.Light.Dialog"></activity>
+        
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
